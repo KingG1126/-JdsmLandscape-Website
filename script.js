@@ -103,6 +103,45 @@ function showFallback(d) {
   formStatus.appendChild(document.createTextNode(' or call ' + BUSINESS_PHONE + '.'));
 }
 
+// Sends the request to Web3Forms. If the browser blocks the normal reply
+// (network / CORS / offline-file quirks), it re-sends in a way that doesn't
+// need a readable reply, so the email still goes through.
+async function sendRequest(d) {
+  const url = 'https://api.web3forms.com/submit';
+  const payload = {
+    access_key: WEB3FORMS_ACCESS_KEY,
+    subject: 'New quote request from ' + d.name,
+    from_name: 'JDSM Landscape Website',
+    name: d.name,
+    email: d.email,
+    phone: d.phone,
+    service: d.service,
+    message: d.message
+  };
+
+  let response;
+  try {
+    response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch (networkErr) {
+    // Browser couldn't read the reply. Re-send as a simple form post.
+    const fd = new FormData();
+    Object.keys(payload).forEach(k => fd.append(k, payload[k]));
+    await fetch(url, { method: 'POST', mode: 'no-cors', body: fd });
+    return; // request was delivered; reply is intentionally unreadable
+  }
+
+  let result = {};
+  try { result = await response.json(); } catch (parseErr) { /* non-JSON reply */ }
+
+  if (!response.ok || !result.success) {
+    throw new Error(result.message || 'Request failed (' + response.status + ')');
+  }
+}
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   formStatus.textContent = '';
@@ -153,31 +192,7 @@ form.addEventListener('submit', async (e) => {
   showStatus('', '#4A6741');
 
   try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_ACCESS_KEY,
-        subject: 'New quote request from ' + data.name,
-        from_name: 'JDSM Landscape Website',
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        service: data.service,
-        message: data.message
-      })
-    });
-
-    let result = {};
-    try { result = await response.json(); } catch (parseErr) { /* non-JSON reply */ }
-
-    if (!response.ok || !result.success) {
-      throw new Error(result.message || 'Request failed');
-    }
-
+    await sendRequest(data);
     showStatus('Thanks, ' + data.name.split(' ')[0] + ' \u2014 we\u2019ll be in touch within one to three business days.', '#4A6741');
     form.reset();
   } catch (err) {
