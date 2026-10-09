@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JDSM Landscape — Grounds, kept.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Desert silhouette shapes, reused by the hero and the divider below -->
+<svg class="desert-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="jdsm-lockup" viewBox="0 0 280 78"><path fill="currentColor" fill-rule="evenodd" d="M51.27 77.93 L48.40 77.99 L41.94 77.80 L21.30 69.94 L13.51 66.73 L1.18 62.30 L0.73 62.05 L0.11 61.25 L-0.03 60.89 L-0.03 60.23 L0.04 59.64 L0.20 59.27 L1.42 57.80 L1.76 57.49 L3.75 56.86 L4.27 55.82 L4.33 55.45 L4.33 55.31 L4.26 55.22 L2.94 55.28 L2.64 55.19 L2.20 54.84 L1.88 54.42 L1.78 54.13 L1.78 53.62 L1.90 52.88 L1.43 49.94 L1.46 49.21 L1.60 48.92 L1.84 48.67 L2.72 48.03 L3.92 46.42 L3.73 43.63 L4.31 41.35 L4.52 40.84 L5.12 39.88 L5.52 39.44 L7.27 38.21 L7.83 37.60 L7.81 37.16 L7.20 36.69 L6.58 35.92 L5.44 32.90 L3.35 30.33 L3.20 29.97 L3.07 27.62 L3.69 26.00 L2.76 18.95 L2.78 17.92 L2.31 14.47 L2.29 13.51 L2.48 13.07 L3.67 11.74 L3.97 11.59 L4.70 11.38 L5.29 11.43 L6.10 11.88 L7.42 11.88 L7.64 11.94 L7.93 12.10 L8.17 12.34 L8.81 13.21 L9.28 13.15 L9.92 11.31 L9.75 1.10 L9.89 0.51 L10.36 0.06 L10.72 -0.04 L14.18 -0.04 L48.92 0.28 L62.87 -0.04 L63.31 0.10 L63.71 0.51 L63.85 1.32 L64.31 18.80 L65.61 52.66 L66.05 76.16 L65.88 76.53 L65.66 76.76 L65.15 77.01Z M50.47 76.09 L63.90 75.22 L64.16 75.14 L63.71 51.85 L62.48 20.27 L62.08 5.07 L61.94 1.84 L49.36 2.14 L44.44 2.15 L11.68 1.82 L11.62 1.91 L11.62 2.20 L11.77 11.75 L10.97 14.10 L10.75 14.54 L10.43 14.86 L10.06 15.01 L8.23 15.14 L7.86 15.01 L7.64 14.84 L6.83 13.76 L5.58 13.75 L4.77 13.34 L4.18 14.03 L4.64 17.48 L4.67 19.02 L5.60 26.00 L5.52 26.59 L4.96 27.91 L5.03 29.38 L7.09 31.95 L8.28 35.03 L8.60 35.40 L9.18 35.74 L9.56 36.14 L9.69 36.50 L9.69 38.12 L9.62 38.41 L9.45 38.71 L8.37 39.77 L6.76 40.89 L6.14 41.86 L5.63 43.85 L5.82 46.42 L5.75 47.08 L5.60 47.37 L4.19 49.26 L3.36 49.94 L3.78 52.59 L3.76 53.32 L3.82 53.37 L5.51 53.30 L5.95 53.51 L6.26 53.91 L6.32 54.72 L6.05 56.48 L5.30 58.02 L4.92 58.43 L4.55 58.62 L2.81 59.12 L1.88 60.23 L1.87 60.45 L1.98 60.56 L2.50 60.76 L14.25 64.98 L22.18 68.25 L42.45 75.97 L48.77 76.13Z M33.71 70.02 L32.32 70.02 L31.80 69.80 L31.36 69.72 L30.85 69.37 L28.86 68.58 L26.59 67.78 L24.02 66.96 L21.59 66.31 L19.17 65.76 L18.95 65.66 L18.58 65.29 L18.53 64.78 L18.66 64.50 L19.10 64.16 L23.08 64.05 L22.33 63.52 L19.32 61.68 L14.84 59.21 L14.40 58.79 L14.29 58.54 L14.30 58.17 L14.62 57.76 L14.84 57.63 L15.35 57.63 L20.34 59.36 L24.34 60.52 L22.50 58.02 L19.78 54.57 L15.33 49.21 L15.18 48.92 L15.20 48.48 L15.50 48.10 L15.79 47.98 L16.23 48.00 L16.67 48.31 L19.54 50.91 L22.33 53.33 L26.22 56.59 L26.73 57.01 L26.82 56.99 L25.57 52.51 L23.82 46.79 L21.80 40.84 L21.79 40.25 L21.93 40.03 L22.25 39.77 L22.84 39.77 L23.29 40.18 L27.30 48.47 L30.66 54.86 L30.70 54.92 L30.75 54.86 L31.24 50.31 L31.61 45.90 L31.90 42.01 L32.21 35.99 L32.39 35.63 L32.68 35.36 L32.90 35.29 L33.27 35.31 L33.42 35.38 L33.67 35.62 L33.81 35.92 L34.13 42.01 L34.42 45.90 L34.79 50.31 L35.28 54.86 L35.33 54.92 L35.36 54.86 L38.73 48.47 L42.74 40.18 L43.19 39.77 L43.70 39.76 L43.92 39.85 L44.24 40.25 L44.23 40.84 L42.21 46.79 L40.45 52.51 L39.21 56.99 L39.29 57.01 L39.81 56.59 L43.70 53.33 L46.49 50.91 L49.36 48.31 L49.80 48.00 L50.24 47.98 L50.53 48.10 L50.82 48.48 L50.85 48.92 L50.70 49.21 L46.25 54.57 L43.53 58.02 L41.69 60.52 L45.68 59.36 L50.68 57.63 L51.12 57.62 L51.34 57.69 L51.66 58.02 L51.74 58.24 L51.66 58.76 L51.19 59.21 L46.71 61.68 L43.70 63.52 L42.95 64.05 L46.93 64.16 L47.21 64.34 L47.48 64.71 L47.48 65.22 L47.15 65.62 L46.86 65.76 L44.44 66.31 L42.01 66.96 L39.44 67.78 L37.16 68.58 L35.18 69.37 L34.67 69.72 L34.23 69.80Z M34.12 68.31 L34.67 67.98 L36.50 67.25 L39.00 66.37 L41.78 65.51 L41.86 65.44 L40.54 65.33 L40.34 65.22 L40.06 64.85 L40.04 64.41 L40.10 64.21 L40.32 63.96 L40.76 63.65 L44.47 61.33 L44.36 61.30 L43.77 61.45 L40.10 62.50 L39.59 62.46 L39.29 62.19 L39.19 61.99 L39.18 61.55 L39.26 61.33 L42.14 57.44 L44.00 55.08 L44.07 54.92 L38.49 59.51 L38.19 59.66 L37.75 59.65 L37.53 59.52 L37.27 59.20 L37.22 58.76 L37.29 58.46 L38.31 54.64 L39.73 49.77 L35.55 57.55 L35.23 57.88 L34.96 57.97 L34.52 57.91 L34.22 57.66 L34.13 57.51 L33.98 56.55 L33.47 51.71 L33.07 46.86 L33.05 46.76 L32.98 46.76 L32.40 53.32 L31.96 57.21 L31.81 57.66 L31.51 57.91 L31.07 57.97 L30.80 57.88 L30.48 57.55 L26.29 49.77 L27.72 54.64 L28.74 58.46 L28.81 58.76 L28.76 59.20 L28.50 59.52 L28.28 59.65 L27.84 59.66 L27.54 59.51 L21.96 54.92 L22.03 55.08 L23.89 57.44 L26.77 61.33 L26.84 61.55 L26.84 61.99 L26.73 62.19 L26.44 62.46 L25.93 62.50 L22.25 61.45 L21.67 61.30 L21.56 61.33 L25.27 63.65 L25.71 63.96 L25.93 64.21 L25.99 64.41 L25.97 64.85 L25.69 65.22 L25.49 65.33 L24.16 65.44 L24.25 65.51 L27.03 66.37 L29.53 67.25 L31.36 67.98 L31.95 68.33 L32.13 68.31 L32.24 67.20 L32.38 66.76 L32.76 66.47 L33.20 66.45 L33.49 66.60 L33.73 66.91 L33.90 68.31Z M193.82 39.64 L187.70 39.67 L183.74 38.99 L180.14 37.87 L179.06 36.94 L178.63 36.00 L178.70 28.87 L179.42 27.61 L181.22 27.00 L181.33 26.64 L179.67 24.84 L178.52 22.32 L178.34 17.64 L178.56 16.20 L179.24 14.40 L180.50 12.64 L182.66 10.69 L184.82 9.61 L188.42 8.86 L195.26 9.22 L200.30 10.37 L201.49 11.16 L202.17 12.60 L202.06 19.08 L201.38 20.34 L199.83 21.24 L201.52 22.68 L203.29 25.92 L203.68 28.44 L203.32 32.76 L201.81 35.64 L200.30 37.19 L197.06 38.95Z M121.46 45.79 L112.10 45.79 L109.58 44.75 L108.54 43.20 L108.46 38.52 L108.79 37.44 L109.58 36.58 L110.66 36.14 L113.90 36.18 L114.91 36.72 L115.70 37.84 L116.06 37.80 L116.20 16.92 L116.06 16.49 L113.90 16.24 L113.04 15.48 L112.64 14.40 L112.68 11.16 L113.54 9.86 L114.62 9.40 L129.02 9.40 L130.10 9.97 L130.86 11.16 L130.89 14.40 L130.10 15.88 L129.38 16.34 L127.94 16.49 L127.76 16.92 L127.65 38.52 L126.93 41.04 L125.85 42.84 L124.34 44.35Z M158.18 38.99 L140.54 39.17 L139.60 38.88 L138.60 37.80 L138.60 33.48 L139.82 32.26 L141.26 32.11 L141.51 31.68 L141.51 16.92 L141.26 16.45 L139.46 16.06 L138.63 15.12 L138.49 14.40 L138.60 10.80 L139.82 9.54 L156.02 9.36 L158.54 9.68 L161.06 10.40 L163.94 11.81 L166.82 14.40 L167.94 15.84 L169.48 19.44 L169.95 22.32 L169.81 27.72 L168.98 30.60 L166.57 34.56 L163.94 36.79 L161.78 37.91Z M249.98 39.06 L235.22 39.10 L233.74 37.80 L233.42 35.10 L231.62 35.64 L227.30 35.64 L225.50 35.21 L225.32 37.80 L223.70 39.13 L213.98 39.17 L212.90 38.92 L212.14 38.16 L211.71 37.08 L211.71 34.20 L212.54 32.65 L214.70 32.04 L214.84 31.68 L214.84 16.92 L214.70 16.49 L212.94 16.20 L211.82 14.72 L211.71 11.52 L212.11 10.44 L212.90 9.72 L213.98 9.36 L224.78 9.36 L225.86 9.65 L226.98 10.80 L231.62 21.06 L235.94 11.52 L237.38 9.61 L249.26 9.36 L250.70 10.01 L251.46 11.52 L251.46 14.40 L250.34 16.13 L248.54 16.45 L248.36 16.92 L248.36 31.68 L248.54 32.11 L249.62 32.18 L250.70 32.72 L251.46 34.20 L251.46 37.08 L250.74 38.52Z M121.17 39.96 L122.25 38.52 L122.68 35.64 L122.72 14.76 L122.18 14.47 L121.28 14.76Z M147.88 33.84 L147.92 14.76 L147.02 14.47 L146.62 14.76 L146.62 33.84 L147.02 34.09Z M230.00 30.24 L222.98 14.87 L222.26 14.51 L222.12 14.76 L229.06 30.24 L229.46 30.53Z M243.10 33.84 L243.10 14.76 L242.06 14.47 L241.56 14.76 L241.88 15.84 L241.88 33.84 L242.78 34.09Z M194.76 18.72 L194.25 17.28 L193.10 16.45 L189.86 16.13 L188.78 16.42 L188.35 16.92 L188.78 17.46 L190.58 18.07 L194.54 19.04Z M155.01 31.68 L156.45 30.60 L157.21 28.80 L157.75 25.20 L157.60 21.60 L157.14 19.44 L156.16 17.64 L154.94 16.88 L153.50 16.63 L153.10 16.92 L153.14 31.68 L153.50 32.04Z M162.28 31.32 L164.01 28.80 L164.88 24.12 L164.05 19.80 L162.14 17.10 L162.90 21.96 L162.90 26.64 L162.00 30.96 L162.00 31.32Z M198.54 29.52 L198.18 27.36 L196.70 25.45 L194.18 24.41 L187.70 22.75 L185.54 21.71 L183.74 19.62 L183.49 19.80 L184.10 21.92 L185.54 23.11 L194.54 25.74 L196.59 27.00Z M236.66 32.04 L236.66 28.44 L235.00 32.04Z M224.10 32.04 L222.62 28.76 L222.51 32.04Z M191.66 32.40 L192.85 32.04 L193.21 31.32 L193.03 30.96 L190.94 30.13 L186.26 28.98 L185.97 29.16 L186.40 30.60 L187.34 31.75 L189.86 32.51Z M183.95 68.77 L179.90 68.82 L177.43 68.37 L175.18 67.65 L174.59 67.15 L174.28 66.47 L174.34 61.98 L175.18 60.98 L176.01 60.85 L174.88 59.50 L174.21 57.93 L174.23 54.10 L174.91 52.52 L175.40 51.92 L176.75 50.70 L178.10 50.03 L180.35 49.55 L184.62 49.76 L187.78 50.50 L188.52 50.95 L188.90 51.65 L188.94 55.90 L188.36 56.80 L187.48 57.25 L188.72 58.38 L189.66 60.18 L189.91 61.53 L189.91 63.33 L189.62 64.67 L188.76 66.25 L187.55 67.44 L185.75 68.34Z M206.90 68.75 L203.30 68.79 L201.28 68.37 L199.25 67.42 L197.90 66.41 L196.71 65.12 L195.76 63.55 L195.15 61.75 L194.93 60.18 L195.06 57.25 L195.36 55.90 L196.26 53.88 L197.31 52.52 L198.91 51.18 L200.82 50.21 L202.18 49.78 L203.98 49.55 L207.80 49.76 L211.40 50.84 L212.23 51.40 L212.64 52.08 L212.64 56.80 L212.08 57.61 L211.40 57.95 L209.60 57.99 L208.93 57.75 L208.16 56.80 L207.64 55.23 L206.45 54.23 L205.10 54.10 L204.43 54.23 L203.75 54.66 L203.23 55.45 L202.76 57.25 L202.69 60.40 L203.03 62.43 L203.44 63.33 L203.98 63.89 L205.32 64.34 L206.68 64.02 L207.35 63.30 L207.94 61.75 L208.93 60.92 L212.08 60.96 L212.66 61.30 L213.06 61.98 L213.06 63.10 L212.77 64.00 L211.49 66.25 L209.83 67.71 L208.47 68.34Z M95.97 68.32 L95.30 68.50 L81.35 68.50 L80.90 68.39 L80.29 67.83 L80.07 67.15 L80.14 65.12 L80.67 64.36 L81.80 64.07 L81.98 63.78 L81.98 54.55 L81.80 54.28 L80.90 54.19 L80.16 53.43 L80.09 51.18 L80.54 50.27 L81.58 49.87 L89.90 49.87 L90.35 49.98 L90.94 50.50 L91.30 51.40 L91.11 53.43 L90.35 54.17 L89.45 54.28 L89.25 54.55 L89.29 63.78 L92.11 63.78 L92.31 62.20 L93.28 61.46 L95.53 61.46 L95.97 61.64 L96.52 62.20 L96.78 63.10 L96.74 67.38Z M119.15 68.37 L110.38 68.39 L109.79 67.83 L109.54 67.15 L109.59 65.12 L110.24 64.22 L109.92 64.13 L107.05 64.22 L107.77 65.35 L107.79 67.15 L107.52 67.83 L106.78 68.41 L101.15 68.48 L100.70 68.32 L100.00 67.60 L99.96 65.12 L100.72 64.22 L101.67 64.00 L106.93 51.18 L107.45 50.32 L107.90 49.98 L111.28 49.87 L111.93 50.05 L112.47 50.50 L117.91 63.78 L118.25 64.07 L119.15 64.18 L119.87 64.90 L119.94 67.38Z M141.65 68.32 L140.97 68.50 L137.82 68.50 L137.15 68.28 L130.40 60.35 L130.22 60.62 L130.29 64.00 L131.30 64.16 L131.75 64.45 L132.25 65.35 L132.25 67.15 L131.82 68.05 L130.85 68.50 L125.00 68.50 L124.33 68.30 L123.83 67.83 L123.54 67.15 L123.65 65.12 L124.41 64.22 L125.45 64.07 L125.59 63.78 L125.59 54.55 L125.45 54.28 L124.35 54.10 L123.58 53.20 L123.56 51.18 L124.10 50.25 L125.00 49.87 L130.18 49.87 L130.85 50.03 L137.60 57.79 L137.74 54.55 L137.60 54.28 L136.52 54.10 L135.91 53.43 L135.82 51.18 L136.03 50.55 L136.54 50.05 L137.15 49.87 L143.00 49.87 L143.97 50.27 L144.42 51.18 L144.39 53.20 L143.68 54.12 L142.55 54.33 L142.46 54.55 L142.46 67.15 L142.35 67.60Z M161.68 68.32 L160.32 68.50 L150.43 68.50 L149.82 68.28 L149.23 67.60 L149.21 65.12 L149.75 64.36 L150.88 64.07 L151.08 63.78 L151.08 54.55 L150.88 54.28 L149.98 54.19 L149.23 53.43 L149.19 50.95 L149.75 50.16 L150.65 49.87 L160.32 49.87 L161.68 50.07 L163.70 50.66 L165.05 51.35 L166.26 52.30 L167.59 53.88 L168.49 55.90 L168.83 57.70 L168.83 60.62 L168.27 63.10 L167.30 64.90 L165.50 66.72 L163.25 67.89Z M236.15 68.37 L227.38 68.39 L226.56 67.38 L226.59 65.12 L227.22 64.22 L226.93 64.13 L224.02 64.22 L224.70 65.35 L224.70 67.15 L224.50 67.83 L223.78 68.41 L218.15 68.48 L217.70 68.34 L217.00 67.60 L216.96 65.12 L217.72 64.22 L218.62 64.00 L223.91 51.18 L224.22 50.57 L224.90 49.96 L228.50 49.89 L229.56 50.73 L234.91 63.78 L235.25 64.07 L236.38 64.36 L236.91 65.12 L236.89 67.60Z M251.45 68.39 L242.00 68.50 L241.33 68.30 L240.85 67.83 L240.63 67.15 L240.78 64.90 L241.33 64.32 L242.45 64.07 L242.56 63.78 L242.59 54.55 L242.45 54.28 L241.35 54.10 L240.88 53.65 L240.63 52.98 L240.65 51.18 L241.08 50.27 L241.55 49.98 L253.03 49.96 L255.50 50.88 L257.10 52.30 L257.57 52.98 L258.22 54.77 L258.31 56.35 L258.04 57.93 L257.08 59.68 L255.72 60.94 L253.93 61.80 L252.35 62.11 L249.83 62.20 L249.85 64.00 L251.45 64.20 L252.26 65.12 L252.26 67.38 L251.90 68.05Z M279.12 68.39 L264.05 68.50 L263.08 68.05 L262.65 67.15 L262.84 64.90 L263.60 64.16 L264.50 64.07 L264.68 63.78 L264.68 54.55 L264.50 54.28 L263.38 54.10 L262.72 53.20 L262.65 51.18 L263.15 50.23 L264.05 49.87 L278.45 49.87 L278.90 49.96 L279.51 50.50 L279.75 51.18 L279.64 55.90 L278.90 56.62 L277.55 56.71 L277.37 57.02 L277.35 61.53 L278.90 61.70 L279.58 62.13 L279.91 62.65 L279.94 67.38Z M86.05 65.12 L86.05 53.20 L85.40 53.07 L85.29 65.12 L85.85 65.30Z M114.94 65.12 L109.92 53.07 L109.68 53.20 L109.41 53.88 L110.17 55.00 L112.42 60.62 L112.53 61.30 L114.20 65.12 L114.43 65.30Z M139.22 65.12 L139.13 64.00 L138.50 63.80 L137.98 63.33 L129.77 53.65 L129.28 53.11 L128.82 53.09 L128.76 54.10 L129.95 54.73 L138.72 65.12 L138.95 65.28Z M155.13 65.12 L155.13 53.20 L154.48 53.07 L154.36 65.12 L154.93 65.30Z M231.94 65.12 L227.04 53.20 L226.70 53.13 L226.39 53.88 L227.24 55.23 L231.09 64.90 L231.43 65.30Z M246.64 65.12 L246.64 53.20 L246.05 53.04 L245.87 53.20 L245.87 65.12 L246.05 65.30Z M268.66 65.12 L268.66 53.20 L268.10 53.04 L267.88 53.20 L267.88 65.12 L268.10 65.30Z M253.88 58.15 L254.85 57.02 L255.03 55.68 L254.67 54.55 L253.70 53.67 L253.59 53.88 L253.97 55.45 L253.99 56.35 L253.59 58.15Z M184.26 55.90 L184.00 54.77 L183.28 54.28 L181.25 54.12 L180.57 54.26 L180.37 54.55 L181.03 55.09Z M158.64 64.00 L159.88 63.64 L160.57 62.88 L161.11 60.85 L161.23 58.38 L160.82 56.12 L160.39 55.23 L159.88 54.71 L158.53 54.37 L158.32 54.55 L158.32 63.78Z M249.97 57.48 L250.55 56.80 L250.69 55.68 L250.37 54.77 L249.88 54.46 L249.81 57.25Z M272.69 56.12 L272.78 55.23 L273.25 54.55 L271.93 54.50 L271.84 56.12Z M164.15 63.55 L165.32 61.53 L165.66 58.83 L165.14 56.35 L163.93 54.66 L164.42 57.48 L164.42 61.08 L163.81 63.55 L163.93 63.71Z M199.97 63.78 L199.38 59.95 L199.50 57.02 L199.93 54.68 L199.18 55.45 L198.49 57.02 L198.22 58.38 L198.22 59.95 L198.78 62.20 L199.63 63.55Z M186.74 62.43 L186.29 60.62 L185.53 59.90 L183.95 59.25 L179.90 58.22 L178.55 57.54 L177.43 56.24 L177.31 56.35 L177.54 57.48 L178.12 58.15 L179.68 58.85 L182.82 59.63 L184.62 60.31 L185.98 61.39 L186.65 62.60Z M275.30 63.78 L275.30 62.85 L273.50 62.65 L272.83 61.93 L272.60 60.87 L271.93 60.90 L271.93 63.84Z M182.53 64.22 L183.28 63.89 L183.23 63.33 L181.93 62.81 L178.89 62.20 L179.13 63.10 L179.68 63.84 L181.48 64.34Z"/></symbol>
+    <symbol id="saguaro-a" viewBox="0 0 100 200" overflow="visible">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 200 V22" stroke-width="22"/>
+        <path d="M50 128 H26 Q17 128 17 119 V78" stroke-width="13"/>
+        <path d="M50 104 H74 Q83 104 83 95 V50" stroke-width="13"/>
+      </g>
+    </symbol>
+    <symbol id="saguaro-b" viewBox="0 0 100 200" overflow="visible">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M45 200 V16" stroke-width="20"/>
+        <path d="M45 142 H72 Q81 142 81 133 V92" stroke-width="12"/>
+        <path d="M45 112 H25 Q17 112 17 104 V82" stroke-width="10"/>
+      </g>
+    </symbol>
+    <symbol id="saguaro-c" viewBox="0 0 100 200" overflow="visible">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 200 V30" stroke-width="18"/>
+        <path d="M50 150 H32 Q24 150 24 142 V116" stroke-width="10"/>
+      </g>
+    </symbol>
+    <symbol id="prickly-pear" viewBox="0 0 100 100" overflow="visible">
+      <g fill="currentColor">
+        <ellipse cx="50" cy="80" rx="23" ry="17"/>
+        <ellipse cx="30" cy="52" rx="15" ry="19" transform="rotate(-20 30 52)"/>
+        <ellipse cx="68" cy="50" rx="15" ry="19" transform="rotate(20 68 50)"/>
+        <ellipse cx="45" cy="27" rx="13" ry="16" transform="rotate(-8 45 27)"/>
+        <ellipse cx="79" cy="23" rx="11" ry="14" transform="rotate(25 79 23)"/>
+      </g>
+    </symbol>
+    <symbol id="agave" viewBox="0 0 100 80" overflow="visible">
+      <g fill="currentColor">
+      <path d="M43,80 Q48.5,43.0 50,6 Q51.5,43.0 57,80Z"/>
+      <path d="M43,80 Q48.5,46.0 50,12 Q51.5,46.0 57,80Z" transform="rotate(-22 50 80)"/>
+      <path d="M43,80 Q48.5,46.0 50,12 Q51.5,46.0 57,80Z" transform="rotate(22 50 80)"/>
+      <path d="M43,80 Q48.5,50.0 50,20 Q51.5,50.0 57,80Z" transform="rotate(-44 50 80)"/>
+      <path d="M43,80 Q48.5,50.0 50,20 Q51.5,50.0 57,80Z" transform="rotate(44 50 80)"/>
+      <path d="M43,80 Q48.5,56.0 50,32 Q51.5,56.0 57,80Z" transform="rotate(-66 50 80)"/>
+      <path d="M43,80 Q48.5,56.0 50,32 Q51.5,56.0 57,80Z" transform="rotate(66 50 80)"/>
+      <path d="M43,80 Q48.5,63.0 50,46 Q51.5,63.0 57,80Z" transform="rotate(-84 50 80)"/>
+      <path d="M43,80 Q48.5,63.0 50,46 Q51.5,63.0 57,80Z" transform="rotate(84 50 80)"/>
+      </g>
+    </symbol>
+    <symbol id="ocotillo" viewBox="0 0 100 160" overflow="visible">
+      <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+        <path d="M50 160 C46 110 30 60 14 12"/>
+        <path d="M50 160 C50 100 52 50 48 4"/>
+        <path d="M50 160 C56 110 72 66 88 16"/>
+        <path d="M48 160 C38 120 20 96 4 78"/>
+        <path d="M52 160 C62 120 82 98 96 80"/>
+        <path d="M49 160 C44 130 38 100 30 62"/>
+        <path d="M51 160 C58 130 66 100 72 60"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="JDSM Landscape, home">
+      <svg class="logo-img" viewBox="0 0 280 78" role="img" aria-label="JDSM Landscape logo"><use href="#jdsm-lockup"/></svg>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#services">Services</a>
+      <a href="#work">Recent work</a>
+      <a href="#process">How we work</a>
+      <a href="#contact" class="nav-cta">Get a quote</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-type" aria-hidden="true">
+      <span>JDSM</span>
+    </div>
+
+    <div class="hero-desert" aria-hidden="true">
+      <svg viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#F0B04A" stop-opacity="0.6"/>
+            <stop offset="1" stop-color="#C08A28" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="horizonGlow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#C9722F" stop-opacity="0"/>
+            <stop offset="0.55" stop-color="#C9722F" stop-opacity="0.22"/>
+            <stop offset="1" stop-color="#E6A040" stop-opacity="0.5"/>
+          </linearGradient>
+        </defs>
+
+        <!-- dusk sky -->
+        <rect width="1440" height="400" fill="url(#horizonGlow)"/>
+
+        <!-- setting sun -->
+        <circle cx="1210" cy="225" r="200" fill="url(#sunGlow)"/>
+        <circle cx="1210" cy="225" r="62" fill="#DDA23C" opacity="0.8"/>
+
+        <!-- far: flat-topped mesas -->
+        <g class="layer-far">
+          <path fill="currentColor" d="M0,400 V292 H70 L92,246 H190 L214,292 H330 L350,268 H430 L452,292 H590 L612,250 L640,232 H730 L752,250 L774,292 H900 L922,262 H990 L1010,292 H1130 L1152,244 H1290 L1314,292 H1440 V400 Z"/>
+        </g>
+
+        <!-- mid: distant saguaros on a low rise -->
+        <g class="layer-mid">
+          <use href="#saguaro-a" x="110" y="245" width="40" height="80"/>
+          <use href="#saguaro-c" x="360" y="266" width="30" height="60"/>
+          <use href="#saguaro-b" x="540" y="252" width="36" height="72"/>
+          <use href="#saguaro-a" x="760" y="240" width="44" height="88"/>
+          <use href="#saguaro-c" x="1000" y="256" width="34" height="68"/>
+          <use href="#saguaro-b" x="1380" y="240" width="40" height="80"/>
+          <path fill="currentColor" d="M0,400 V318 C160,306 280,326 460,318 C640,310 760,328 940,320 C1120,312 1280,304 1440,314 V400 Z"/>
+        </g>
+
+        <!-- near: foreground desert floor and plants -->
+        <g class="layer-near">
+          <use href="#saguaro-a" x="100" y="120" width="112" height="224"/>
+          <use href="#saguaro-c" x="212" y="236" width="52" height="104"/>
+          <use href="#prickly-pear" x="250" y="298" width="58" height="58"/>
+          <use href="#agave" x="296" y="306" width="56" height="45"/>
+
+          <use href="#prickly-pear" x="860" y="308" width="56" height="56"/>
+          <use href="#saguaro-c" x="915" y="246" width="58" height="116"/>
+          <use href="#ocotillo" x="985" y="212" width="50" height="150"/>
+          <use href="#prickly-pear" x="1090" y="304" width="62" height="62"/>
+          <use href="#saguaro-a" x="1168" y="196" width="80" height="160"/>
+          <use href="#agave" x="1218" y="312" width="54" height="43"/>
+          <use href="#saguaro-b" x="1236" y="118" width="110" height="234"/>
+
+          <path fill="currentColor" d="M0,400 V352 C180,340 300,358 480,352 C660,346 780,360 960,354 C1140,348 1300,340 1440,348 V400 Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">Family-owned · Serving Scottsdale &amp; the Valley since 2009</p>
+      <h1>We shape the ground<br>you live on.</h1>
+      <p class="hero-sub">Design, planting, hardscape, and the maintenance that keeps it all standing up straight — handled by the same crew, season after season.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a free estimate</a>
+        <a href="#work" class="btn btn-ghost">See recent work</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>16</strong><span>years in the Valley</span></div>
+      <div class="stat"><strong>480+</strong><span>properties maintained</span></div>
+      <div class="stat"><strong>4.9</strong><span>average client rating</span></div>
+    </div>
+  </section>
+
+  <svg class="desert-divider" viewBox="0 0 1440 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <!-- distant ridge with faint saguaros -->
+    <g class="dune-back">
+      <use href="#saguaro-a" x="180" y="8" width="34" height="68"/>
+      <use href="#saguaro-c" x="520" y="18" width="26" height="52"/>
+      <use href="#saguaro-b" x="930" y="6" width="34" height="68"/>
+      <use href="#saguaro-a" x="1300" y="16" width="28" height="56"/>
+      <path fill="currentColor" d="M0,110 V66 C200,54 380,74 600,64 C820,54 1040,72 1240,60 C1330,55 1390,60 1440,64 V110 Z"/>
+    </g>
+    <!-- foreground sand, with plants growing up out of it -->
+    <g class="dune-front">
+      <use href="#prickly-pear" x="90" y="60" width="38" height="38"/>
+      <use href="#agave" x="330" y="64" width="38" height="30"/>
+      <use href="#agave" x="520" y="66" width="30" height="24"/>
+      <use href="#saguaro-c" x="700" y="44" width="22" height="44"/>
+      <use href="#prickly-pear" x="1010" y="58" width="36" height="36"/>
+      <use href="#agave" x="1210" y="58" width="34" height="27"/>
+      <use href="#prickly-pear" x="1350" y="56" width="34" height="34"/>
+      <path fill="currentColor" d="M0,110 V86 C160,76 320,92 520,84 C720,76 900,94 1100,82 C1250,74 1360,82 1440,78 V110 Z"/>
+    </g>
+  </svg>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-head">
+      <h2>What we take care of</h2>
+      <p>Every job below is handled in-house — no subcontracted crews, no surprises on the invoice.</p>
+    </div>
+
+    <div class="service-rows" id="serviceRows">
+
+      <article class="service-row reveal">
+        <div class="service-media" style="--tint:#4A6741">
+          <svg viewBox="0 0 200 200"><path d="M20,160 Q40,60 100,50 Q160,60 180,160 Z" fill="currentColor"/><circle cx="100" cy="40" r="18" fill="currentColor"/></svg>
+        </div>
+        <div class="service-copy">
+          <h3>Lawn &amp; turf care</h3>
+          <p>Weekly mowing, edging, fertilization, and weed control on a schedule built around our desert seasons — not a generic calendar.</p>
+          <ul>
+            <li>Mowing &amp; edging</li>
+            <li>Weed control</li>
+            <li>Fertilization programs</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-row reverse reveal">
+        <div class="service-media" style="--tint:#C08A28">
+          <svg viewBox="0 0 200 200"><rect x="30" y="90" width="140" height="70" fill="currentColor"/><path d="M30,90 L100,30 L170,90 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="service-copy">
+          <h3>Landscape design</h3>
+          <p>From a rough sketch on a napkin to a full planting plan — we design for how the yard will actually be used, not just how it photographs.</p>
+          <ul>
+            <li>Site planning &amp; consultation</li>
+            <li>Native &amp; drought-tolerant planting</li>
+            <li>3D concept renderings</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-row reveal">
+        <div class="service-media" style="--tint:#8A5A3B">
+          <svg viewBox="0 0 200 200"><rect x="20" y="120" width="160" height="20" fill="currentColor"/><rect x="20" y="150" width="160" height="20" fill="currentColor"/><rect x="60" y="60" width="80" height="50" fill="currentColor"/></svg>
+        </div>
+        <div class="service-copy">
+          <h3>Hardscaping</h3>
+          <p>Pavers, retaining walls, fire pits, and walkways built to hold up against monsoon runoff and summer heat alike.</p>
+          <ul>
+            <li>Paver patios &amp; walkways</li>
+            <li>Retaining walls</li>
+            <li>Outdoor fire features</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-row reverse reveal">
+        <div class="service-media" style="--tint:#3A6E8F">
+          <svg viewBox="0 0 200 200"><path d="M100,20 C60,80 40,110 100,150 C160,110 140,80 100,20 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="service-copy">
+          <h3>Irrigation &amp; drainage</h3>
+          <p>Drip systems, smart controllers, and grading that moves water where it should go instead of where it pools.</p>
+          <ul>
+            <li>Drip &amp; sprinkler install</li>
+            <li>Smart controller setup</li>
+            <li>Drainage correction</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-row reveal">
+        <div class="service-media" style="--tint:#5C7A52">
+          <svg viewBox="0 0 200 200"><path d="M100,10 L110,90 L180,100 L110,110 L100,190 L90,110 L20,100 L90,90 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="service-copy">
+          <h3>Tree &amp; shrub care</h3>
+          <p>Pruning, palm trimming, and health checks that keep mature trees from becoming next season's liability.</p>
+          <ul>
+            <li>Structural pruning</li>
+            <li>Palm &amp; citrus trimming</li>
+            <li>Pest &amp; disease monitoring</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-row reverse reveal">
+        <div class="service-media" style="--tint:#A85C32">
+          <svg viewBox="0 0 200 200"><path d="M20,180 Q100,20 180,180 Z" fill="currentColor"/></svg>
+        </div>
+        <div class="service-copy">
+          <h3>Seasonal cleanup</h3>
+          <p>Pre-monsoon prep in spring, leaf and debris clearing in fall — the maintenance that gets skipped and then regretted.</p>
+          <ul>
+            <li>Spring &amp; fall cleanup</li>
+            <li>Monsoon prep</li>
+            <li>Mulch refresh</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="service-row reveal">
+        <div class="service-media" style="--tint:#6E8B3D">
+          <svg viewBox="0 0 200 200">
+            <path d="M50,170 Q50,110 35,70 Q68,105 68,170 Z" fill="currentColor"/>
+            <path d="M90,170 Q92,90 80,35 Q118,85 112,170 Z" fill="currentColor"/>
+            <path d="M132,170 Q135,115 155,75 Q160,120 152,170 Z" fill="currentColor"/>
+            <rect x="20" y="170" width="160" height="8" rx="2" fill="currentColor"/>
+            <circle cx="42" cy="188" r="3" fill="currentColor"/>
+            <circle cx="100" cy="190" r="3" fill="currentColor"/>
+            <circle cx="150" cy="188" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="service-copy">
+          <h3>Overseeding</h3>
+          <p>Bermuda goes dormant when the weather cools. We overseed each fall so your lawn stays green through winter, then transition it back in spring.</p>
+          <ul>
+            <li>Winter rye overseeding</li>
+            <li>Scalping &amp; seedbed prep</li>
+            <li>Spring transition</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- RECENT WORK -->
+  <section class="work" id="work">
+    <div class="section-head light">
+      <h2>Recent work</h2>
+      <p>A few properties we've reshaped this year.</p>
+    </div>
+    <div class="work-scroll" id="workScroll">
+      <figure class="work-card" style="--c1:#4A6741;--c2:#2F4A2B">
+        <figcaption><h4>Desert-modern backyard</h4><span>Paradise Valley — design + hardscape</span></figcaption>
+      </figure>
+      <figure class="work-card" style="--c1:#C08A28;--c2:#8A5F17">
+        <figcaption><h4>Front yard xeriscape</h4><span>Scottsdale — planting + irrigation</span></figcaption>
+      </figure>
+      <figure class="work-card" style="--c1:#3A6E8F;--c2:#22465C">
+        <figcaption><h4>Pool deck &amp; fire pit</h4><span>Fountain Hills — hardscape</span></figcaption>
+      </figure>
+      <figure class="work-card" style="--c1:#8A5A3B;--c2:#5C3B23">
+        <figcaption><h4>Courtyard restoration</h4><span>Cave Creek — full renovation</span></figcaption>
+      </figure>
+      <figure class="work-card" style="--c1:#5C7A52;--c2:#3A5233">
+        <figcaption><h4>HOA common grounds</h4><span>Tempe — ongoing maintenance</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="section-head">
+      <h2>How a project moves</h2>
+      <p>The same four stages, whether it's a mow-and-go or a full backyard rebuild.</p>
+    </div>
+    <ol class="process-list">
+      <li>
+        <h3>Walk the property</h3>
+        <p>We come out, look at the ground, the sun, the drainage, and talk through what you actually want from the space.</p>
+      </li>
+      <li>
+        <h3>Send a written estimate</h3>
+        <p>Itemized, no vague line items — you'll know what you're paying for before anyone touches a shovel.</p>
+      </li>
+      <li>
+        <h3>Do the work</h3>
+        <p>Our own crew, our own equipment, scheduled around the weather rather than in spite of it.</p>
+      </li>
+      <li>
+        <h3>Keep it up</h3>
+        <p>Most clients move into a recurring maintenance plan once the initial project wraps.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-copy">
+        <h2>Tell us about your yard</h2>
+        <p>Send a few details and we'll get back to you within one to three business days with the next steps.</p>
+        <div class="contact-details">
+          <div><span>Phone</span><a href="tel:4805443994">(480) 544-3994</a></div>
+          <div><span>Email</span><a href="mailto:jdsmlandscape@gmail.com">jdsmlandscape@gmail.com</a></div>
+          <div><span>Service area</span><p>We proudly serve homeowners and businesses across the Greater Phoenix Area.
+            <br> Our core service footprint includes the following communities: <br><br> North & Northeast: Cave Creek, Carefree, Paradise Valley, Fountain Hills, Scottsdale 
+            <br>East Valley: Gilbert, Chandler, Mesa, Tempe, Apache Junction 
+            <br>Southeast Valley: San Tan Valley, Queen Creek</p></div>
+          <div>
+            <span>Connect with us</span>
+            <div class="social-links">
+              <a href="https://www.instagram.com/jdsmlandscaping/" target="_blank" rel="noopener" aria-label="JDSM Landscape on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com/@jdsmlandscaping" target="_blank" rel="noopener" aria-label="JDSM Landscape on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          <span class="form-error" data-for="name"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="form-error" data-for="email"></span>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-row">
+          <label for="service">What do you need?</label>
+          <select id="service" name="service">
+            <option value="">Select one</option>
+            <option>Lawn &amp; turf care</option>
+            <option>Overseeding</option>
+            <option>Landscape design</option>
+            <option>Hardscaping</option>
+            <option>Irrigation &amp; drainage</option>
+            <option>Tree &amp; shrub care</option>
+            <option>Seasonal cleanup</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Property size, what you're picturing, timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send request</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="#top" class="brand" aria-label="JDSM Landscape, home">
+      <svg class="logo-img logo-img-sm" viewBox="0 0 280 78" role="img" aria-label="JDSM Landscape logo"><use href="#jdsm-lockup"/></svg>
+    </a>
+    <div class="social-links social-links-sm">
+      <a href="https://www.instagram.com/jdsmlandscaping/" target="_blank" rel="noopener" aria-label="JDSM Landscape on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/@jdsmlandscaping" target="_blank" rel="noopener" aria-label="JDSM Landscape on TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+        </svg>
+      </a>
+    </div>
+    <p>&copy; <span id="year"></span> JDSM Landscape. Licensed &amp; insured in Arizona.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
