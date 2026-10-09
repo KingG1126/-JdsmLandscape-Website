@@ -14,7 +14,7 @@ mainNav.querySelectorAll('a').forEach(link => {
   });
 });
 
-// ---------- header background on scroll ----------
+// ---------- header shadow on scroll ----------
 const header = document.getElementById('siteHeader');
 window.addEventListener('scroll', () => {
   header.style.boxShadow = window.scrollY > 20 ? '0 2px 12px rgba(0,0,0,0.15)' : 'none';
@@ -39,17 +39,27 @@ if ('IntersectionObserver' in window) {
 }
 
 // ---------- contact form ----------
-// Requests are emailed to you through Web3Forms (web3forms.com).
-// Paste the access key that Web3Forms emails you between the quotes below.
-const WEB3FORMS_ACCESS_KEY = 'PASTE_YOUR_ACCESS_KEY_HERE';
+// Quote requests are emailed to jdsmlandscape@gmail.com through Web3Forms (web3forms.com).
+//
+// ONE-TIME SETUP (2 minutes):
+//   1. Go to https://web3forms.com and enter jdsmlandscape@gmail.com
+//   2. They email you a free "access key"
+//   3. Paste it between the quotes below (done)
+const WEB3FORMS_ACCESS_KEY = '4b2fb20a-d293-47e0-8733-e4c0eab8570f';
+const BUSINESS_EMAIL = 'jdsmlandscape@gmail.com';
+const BUSINESS_PHONE = '(480) 544-3994';
 
 const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
+const formStatus = document.getElementById('formStatus');
 const submitBtn = form.querySelector('button[type="submit"]');
 
+function field(name) {
+  return form.elements.namedItem(name);
+}
+
 function setError(fieldName, message) {
-  const row = form.querySelector(`#${fieldName}`).closest('.form-row');
-  const errorEl = form.querySelector(`.form-error[data-for="${fieldName}"]`);
+  const row = field(fieldName).closest('.form-row');
+  const errorEl = form.querySelector('.form-error[data-for="' + fieldName + '"]');
   if (message) {
     row.classList.add('error');
     if (errorEl) errorEl.textContent = message;
@@ -63,34 +73,76 @@ function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
+// Builds a pre-filled email to the business so a request is never lost,
+// even if the form service is unavailable.
+function buildMailto(d) {
+  const body =
+    'Name: ' + d.name + '\n' +
+    'Email: ' + d.email + '\n' +
+    'Phone: ' + d.phone + '\n' +
+    'Service: ' + d.service + '\n\n' +
+    d.message;
+  return 'mailto:' + BUSINESS_EMAIL +
+    '?subject=' + encodeURIComponent('New quote request from ' + d.name) +
+    '&body=' + encodeURIComponent(body);
+}
+
+function showStatus(text, color) {
+  formStatus.style.color = color;
+  formStatus.textContent = text;
+}
+
+function showFallback(d) {
+  formStatus.style.color = '#b3432f';
+  formStatus.textContent = 'We couldn\u2019t send that automatically. ';
+  const link = document.createElement('a');
+  link.href = buildMailto(d);
+  link.textContent = 'Click here to email us instead';
+  link.style.textDecoration = 'underline';
+  formStatus.appendChild(link);
+  formStatus.appendChild(document.createTextNode(' or call ' + BUSINESS_PHONE + '.'));
+}
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  status.textContent = '';
+  formStatus.textContent = '';
 
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
+  const data = {
+    name: field('name').value.trim(),
+    email: field('email').value.trim(),
+    phone: field('phone').value.trim() || 'Not provided',
+    service: field('service').value || 'Not specified',
+    message: field('message').value.trim() || 'No details provided'
+  };
+
   let valid = true;
 
-  if (!name) {
+  if (!data.name) {
     setError('name', 'Please enter your name.');
     valid = false;
   } else {
     setError('name', '');
   }
 
-  if (!email) {
+  if (!data.email) {
     setError('email', 'Please enter your email.');
     valid = false;
-  } else if (!isValidEmail(email)) {
-    setError('email', 'That email doesn\'t look right.');
+  } else if (!isValidEmail(data.email)) {
+    setError('email', 'That email doesn\u2019t look right.');
     valid = false;
   } else {
     setError('email', '');
   }
 
   if (!valid) {
-    status.style.color = '#b3432f';
-    status.textContent = 'Please fix the fields above.';
+    showStatus('Please fix the fields above.', '#b3432f');
+    return;
+  }
+
+  // Access key not added yet: open a pre-filled email so the request still reaches the business.
+  if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === 'PASTE_YOUR_ACCESS_KEY_HERE') {
+    showStatus('Opening your email app to send this request\u2026', '#4A6741');
+    window.location.href = buildMailto(data);
     return;
   }
 
@@ -98,8 +150,7 @@ form.addEventListener('submit', async (e) => {
   const originalLabel = submitBtn.textContent;
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending...';
-  status.style.color = '#4A6741';
-  status.textContent = '';
+  showStatus('', '#4A6741');
 
   try {
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -110,29 +161,28 @@ form.addEventListener('submit', async (e) => {
       },
       body: JSON.stringify({
         access_key: WEB3FORMS_ACCESS_KEY,
-        subject: `New quote request from ${name}`,
+        subject: 'New quote request from ' + data.name,
         from_name: 'JDSM Landscape Website',
-        name: name,
-        email: email,
-        phone: form.phone.value.trim() || 'Not provided',
-        service: form.service.value || 'Not specified',
-        message: form.message.value.trim() || 'No details provided'
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        service: data.service,
+        message: data.message
       })
     });
 
-    const result = await response.json();
+    let result = {};
+    try { result = await response.json(); } catch (parseErr) { /* non-JSON reply */ }
 
     if (!response.ok || !result.success) {
       throw new Error(result.message || 'Request failed');
     }
 
-    status.style.color = '#4A6741';
-    status.textContent = `Thanks, ${name.split(' ')[0]} — we'll be in touch within one to three business days.`;
+    showStatus('Thanks, ' + data.name.split(' ')[0] + ' \u2014 we\u2019ll be in touch within one to three business days.', '#4A6741');
     form.reset();
   } catch (err) {
     console.error(err);
-    status.style.color = '#b3432f';
-    status.textContent = 'Something went wrong sending that. Please call (480) 544-3994 or email jdsmlandscape@gmail.com.';
+    showFallback(data);
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = originalLabel;
