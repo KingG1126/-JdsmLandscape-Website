@@ -111,7 +111,7 @@ form.addEventListener('submit', async (e) => {
       body: JSON.stringify({
         access_key: WEB3FORMS_ACCESS_KEY,
         subject: `New quote request from ${name}`,
-        from_name: 'JDSM Landscaping Website',
+        from_name: 'JDSM Landscape Website',
         name: name,
         email: email,
         phone: form.phone.value.trim() || 'Not provided',
@@ -132,7 +132,7 @@ form.addEventListener('submit', async (e) => {
   } catch (err) {
     console.error(err);
     status.style.color = '#b3432f';
-    status.textContent = 'Something went wrong sending that. Please call (480) 544-3994 or email jdsmlandscaping@gmail.com.';
+    status.textContent = 'Something went wrong sending that. Please call (480) 544-3994 or email jdsmlandscape@gmail.com.';
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = originalLabel;
